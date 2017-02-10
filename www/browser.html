@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/browser.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+      <script src="js/browser.js"></script>
+    <script>
+         document.addEventListener("deviceready", function () {
+        runningInCordova = true;
+    }, false);
+        
+    </script>
+    <script src="cordova.js"></script>
+    
+</head>
+<body onload="sizeB()">
+    <div id="browserintro" >
+      <div id="skip" onclick="skip()">
+        <div id="ski">
+        SKIP
+      </div>
+      </div>
+
+      <div id="img1">
+          <img id="disp" src="other/browimg.gif" height="auto" width="100%" />
+      </div>
+      <div id="detail" align="center">
+        Websites store your private data without you even knowing!
+      </div>
+      <div id="next" class="next" onclick="nximg()">
+        <img src="other/next.png" height="auto" width="100%" />
+      </div>
+    </div>
+
+    <div id="browser">
+      <img src="other/browback.jpg" height="100%" width="100%">
+      <div id="topbar">
+        <img id="incog" src="other/private.png" height="50%" width="auto">
+        <div id="email">
+          youremail@gmail.com
+        </div>
+      </div>
+
+      <div id="searchbar">
+        <input id= "sb" placeholder="Browse to ? ..." />
+      </div>
+      <div id="nxt" class="next" onclick="go()" align="center">
+        <img src="other/nextw.png" height="auto" width="100%" />
+        <br>
+        Go
+      </div>
+
+
+      <div id="browsertools">
+        <div id="tool1" align="center" onclick="goBack()">
+          <img src="other/home.png" height="auto" width="100%">
+          <br>
+          Home
+        </div>
+
+        <div id="tool2" align="center" onclick="noti(1)">
+          <img src="other/star.png" height="auto" width="100%">
+          <br>
+          Fav.
+        </div>
+
+        <div id="tool3" align="center" onclick="noti(1)">
+          <img src="other/download.png" height="auto" width="100%">
+          <br>
+          Saved
+        </div>
+
+        <div id="tool4" align="center" onclick="noti(2)">
+          <img src="other/close.png" height="auto" width="100%">
+          <br>
+          Clear
+        </div>
+
+        <div id="tool5" align="center" onclick="noti(1)">
+          <img src="other/set.png" height="auto" width="100%">
+          <br>
+          Settings
+        </div>
+      </div>
+
+      <div id="noti" class="noti" onclick="sideb()">
+        <div id="notimg">
+          <img id="idk" height="100%" width="auto" />
+        </div>
+
+        <div id="notitext">
+        </div>
+      </div>
+
+    </div>
+    <a id="link" href=""></a>
+</body>
+</html>

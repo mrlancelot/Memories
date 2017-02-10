@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="js/jquery.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+      <script src="js/main.js"></script>
+      <script type="text/javascript" charset="utf-8">
+
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      function onDeviceReady() {
+          navigator.geolocation.getCurrentPosition(onSuccess, onError);
+      }
+
+      function onSuccess(position) {
+          localStorage.latt = position.coords.latitude;
+          localStorage.long = position.coords.longitude;
+      }
+
+      function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    </script>
+
+</head>
+<body onload="sizeR()">
+    <div id="introback">
+
+    <div id="logo">
+      <img src="other/logo.gif" height="auto" width="100%"/>
+    </div>
+    <div id="mem" class="mem" onclick="tryme()">
+      Memories
+    </div>
+    <div id="cupcake" class="mem">
+      *
+    </div>
+    <div id="but1" class="button" onclick="login()">
+        Login
+    </div>
+    <div id="team" align="center">
+      Made with love and a *
+      <br>
+      <div id="teamname">
+        | BRACKETS, INDIA |
+      </div>
+  </div>
+
+  <div id="hey" align="center">
+    Hey :) <br><br>
+    <div id="name">
+    </div>
+  </div>
+
+</div>
+
+
+<div id="dash">
+    <div id="upperBar" class="upperBar">
+      <div id="home">
+        Home
+      </div>
+      <div id="ham" class="ic">
+        <i class="fa fa-bars" onclick="sideb()"></i>
+      </div>
+      <div id="lock" class="ic">
+        <i class="fa fa-lock" onclick="sideb()"></i>
+      </div>
+      <div id="userP" >
+        <img id="userPic" height="100%" width="100%" style="border-radius:50%" />
+      </div>
+    </div>
+
+    <div id="cser" onclick="cus()">
+      <i class="fa fa-cog" style="display:inline;"></i>
+      &nbsp; Custom Search
+    </div>
+ <div id="sbox">
+   <input id= "sb" placeholder="Enter your search term ..." />
+      <div id="sbut">
+       <i class="fa fa-search" onclick="ser()" style="display:inline;"></i>
+     </div>
+  </div>
+  <div id="des">
+
+  </div>
+
+
+    <div id="sresult">
+
+    </div>
+
+    <div id="instruc" align="center">
+      <img src="other/pic.png" height="100%" width="auto">
+    </div>
+<div id="check">
+  <div id="c1" class="box" onclick="c1f()">
+    <div id="c11" class="inner">
+    </div>
+  </div>
+  <div id="c2" class="box" onclick="c2f()">
+    <div id="c22" class="inner">
+    </div>
+  </div>
+  <div id="c3" class="box" onclick="c3f()">
+    <div id="c33" class="inner">
+    </div>
+  </div>
+  <div id="c4" class="box" onclick="c4f()">
+    <div id="c44" class="inner">
+    </div>
+  </div>
+  <div id="c5" class="box" onclick="c5f()">
+    <div id="c55" class="inner">
+    </div>
+  </div>
+</div>
+<div id="go" onclick="gopro()">
+  <img src="other/go.png" height="auto" width="100%" />
+</div>
+<div id="proceed" class="lowerBar">
+  <div id="wy" class="social" onclick="wyf()" align="center">
+    <img id="wyi" src="other/wy.png" height="auto" width="100%" />
+    <br>
+    Write Yourself
+  </div>
+  <div id="cw" class="social" onclick="noti(5)" align="center">
+    <img id="cwi" src="other/cw.png" height="auto" width="100%" />
+    <br>
+    Custom Template
+  </div>
+  <div id="dn" class="social" onclick="subn()" align="center">
+    <img id="dni" src="other/dn.png" height="auto" width="100%" />
+    <br>
+    Submit
+  </div>
+  <div id="clopro">
+    <i class="fa fa-close" onclick="cloprof()"></i>
+  </div>
+  <div id="pr" class="line">
+  </div>
+</div>
+
+<div id="proceed2" class="lowerBar">
+  <div id="pro2img">
+      <img src="other/loc.png" height="auto" width="100%" />
+  </div>
+      <div id="locate" class="box" onclick="conflo()">
+        <div class="inner">
+        </div>
+      </div>
+      <div id="locatetext">
+      Allow this app to use your location. Location is important.
+    </div>
+    <div id="clopro">
+      <i class="fa fa-close" onclick="clopro2f()"></i>
+    </div>
+</div>
+
+
+<div id="proceed3" class="lowerBar">
+  <div id="pro3img" onclick="dnf()">
+      <img src="other/dn.png" height="auto" width="100%" />
+  </div>
+  <input id= "docbar" placeholder="Enter your search term ..." />
+      <div id="doctext">
+      Please upload your ID to google drive/one drive and provide here the sharable link.
+    </div>
+    <div id="clopro">
+      <i class="fa fa-close" onclick="clopro3f()"></i>
+    </div>
+</div>
+
+
+
+
+<div id="noti" class="noti" onclick="sideb()">
+  <div id="notimg">
+    <img id="idk" height="100%" width="auto" />
+  </div>
+
+  <div id="notitext">
+  </div>
+</div>
+
+
+<div id="customSearch" class="lowerBar">
+  <div id="yt" class="social" onclick="ytf()" align="center">
+    <img id="yti" src="other/ytb.png" height="auto" width="100%" />
+    <br>
+    YouTube
+  </div>
+  <div id="in" class="social" onclick="inf()" align="center">
+    <img id="ini" src="other/inb.png" height="auto" width="100%" />
+    <br>
+    Linked In
+  </div>
+  <div id="fb" class="social" onclick="noti(5)" align="center">
+    <img src="other/fbb.png" height="auto" width="100%" />
+    <br>
+    Facebook
+  </div>
+  <div id="tw" class="social" onclick="noti(5)" align="center">
+    <img src="other/twb.png" height="auto" width="100%" />
+    <br>
+    Twitter
+  </div>
+  <div id="line" class="line">
+  </div>
+</div>
+
+
+<div id="lowerBar" class="lowerBar">
+  <div id="up1" class="social" onclick="f()" align="center">
+    <img id="up1i" src="other/up1.png" height="auto" width="100%" />
+    <br>
+    Setup Privacy
+  </div>
+  <a href="browser.html"><div id="up2" class="social" align="center">
+    <img id="up2i" src="other/up2.png" height="auto" width="100%" />
+    <br>
+    Private Browser
+      </div></a>
+  <div id="up3" class="social" onclick="f()" align="center">
+    <img id="up3i" src="other/up3.png" height="auto" width="100%" />
+    <br>
+    Track Submission
+  </div>
+  <div id="up4" class="social" onclick="noti(5)" align="center">
+    <img id="up4i" src="other/up4.png" height="auto" width="100%" />
+    <br>
+    Settings
+  </div>
+
+
+  <div id="d1" class="social" onclick="noti(4)" align="center">
+    <img id="d1i" src="other/d1.png" height="auto" width="100%" />
+    <br>
+    Delete App Data
+  </div>
+  <a href="mailto:swastikshrivastava0@gmail.com?cc=swastikshrivastava00@gmail.com, agnihotrishivam636@gmail.com, pridhvi.krishna@yahoo.com&subject=Bug%20Report&body=Hey-I-want-to-report-a-bug">
+  <div id="d2" class="social" align="center">
+    <img id="d2i" src="other/d2.png" height="auto" width="100%" />
+    <br>
+    Report Bugs
+  </div></a>
+  <div id="d3" class="social" onclick="noti(3)" align="center">
+    <img id="d3i" src="other/d3.png" height="auto" width="100%" />
+    <br>
+    App Info
+  </div>
+  <div id="d4" class="social" onclick="noti(2)" align="center">
+    <img id="d4i" src="other/d4.png" height="auto" width="100%" />
+    <br>
+    Log Out
+  </div>
+</div>
+
+
+</div>
+
+<a id="linker" href="" ></a>
+<script src="cordova.js"></script>
+
+
+</body>
+</html>
